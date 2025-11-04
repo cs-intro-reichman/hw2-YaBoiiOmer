@@ -6,7 +6,7 @@ public class TimeCalc {
         int timeToAdd = Integer.parseInt(args[1]);
 
         int minutesToAdd = timeToAdd % 60;
-        int hoursToAdd = (timeToAdd / 60) % 24;
+        int hoursToAdd = timeToAdd / 60;
 
         int newHours = (hours + hoursToAdd) % 24;
         int newMinutes = minutes + minutesToAdd;
@@ -15,6 +15,7 @@ public class TimeCalc {
             newMinutes = newMinutes % 60;
             newHours += 1;
         }
+        newHours = newHours % 24;
 
         String timeOutput = (newHours < 10 ? "0" + newHours : newHours) + ":" + (newMinutes < 10 ? "0" + newMinutes : newMinutes);
         System.out.println(timeOutput);
