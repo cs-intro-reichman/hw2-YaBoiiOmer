@@ -1,7 +1,7 @@
 /*
 Feedback:
 Great work!
-Yam
+Yam Libman
 */
 
 
@@ -56,4 +56,5 @@ public class Collatz {
 
 	}
 }
+
 
